@@ -1,0 +1,17 @@
+<!-- <div *ngFor="let x of arr; index as idx">
+    <div [ngClass]="{'a1': idx % 2 === 0}">
+        {{x.a}} {{idx}}
+    </div>
+</div> -->
+
+<!-- <input type="text" (keyup)="test($event)"> -->
+
+<!-- <input type="text" [(ngModel)]="myinput">
+<button (click)="send()">Click</button>
+{{myinput}} -->
+<input type="text" (keyup)="filterPosts($event)">
+<h1>total likes:{{totaLikes}}
+</h1>
+<div *ngFor="let post of filteredPosts">
+    <app-student [myprop]="post" (myLikes)="addLike($event)"></app-student>
+</div>
